@@ -4,7 +4,7 @@ $(function () {
     let con1 = $(".page1").offset().top + baseline;
     let con2 = $(".page2").offset().top + baseline;
     let con3 = $(".page3").offset().top + baseline;
-    // let con4 = $(".page4").offset().top + baseline;
+    let con4 = $(".page4").offset().top + baseline;
     let con5 = $(".page5").offset().top + baseline;
     let con6 = $(".page6").offset().top + baseline;
     let con7 = $(".page7").offset().top + baseline;
@@ -145,7 +145,7 @@ $(function () {
                 clearInterval(numstop6);
             }, 3000);
             //
-        } else if (point >= con3 && point < con5) {
+        } else if (point >= con3 && point < con4) {
             erase();
             $(".navi li").eq(2).children("span").stop().addClass("on");
             $(".navi li").eq(2).children("div").stop().addClass("col_on");
@@ -175,43 +175,40 @@ $(function () {
                 //오른쪽 홈페이지 옆에서 들어오게
                 $(".page3 .comein").stop().addClass("comes");
             }, 1800);
-        }
-
-        // else if (point >= con4 && point < con5) {
-        //     erase();
-        //     $(".navi li").eq(3).children("span").stop().addClass("on");
-        //     $(".navi li").eq(3).children("div").stop().addClass("col_on");
-
-        //     //홈페이지2
-        //     setTimeout(function () {
-        //         //타이틀
-        //         $(".page4 .p_titl").stop().addClass("up_act");
-        //     }, 100);
-        //     setTimeout(function () {
-        //         //목업
-        //         $(".page4 .mock").stop().addClass("go_up");
-        //     }, 600);
-        //     setTimeout(function () {
-        //         //홈피제목
-        //         $(".page4 .hm").stop().addClass("go_up");
-        //     }, 850);
-        //     setTimeout(function () {
-        //         //내용설명
-        //         $(".page4 .descript").stop().addClass("go_up");
-        //     }, 1200);
-        //     setTimeout(function () {
-        //         //버튼두개
-        //         $(".page4 .more_butt").stop().addClass("go_up");
-        //     }, 1600);
-        //     setTimeout(function () {
-        //         //오른쪽 홈페이지 옆에서 들어오게
-        //         $(".page4 .comein").stop().addClass("comes");
-        //     }, 1800);
-        // }
-        else if (point >= con5 && point < con6) {
+        } else if (point >= con4 && point < con5) {
             erase();
             $(".navi li").eq(3).children("span").stop().addClass("on");
             $(".navi li").eq(3).children("div").stop().addClass("col_on");
+
+            //홈페이지2
+            setTimeout(function () {
+                //타이틀
+                $(".page4 .p_titl").stop().addClass("up_act");
+            }, 100);
+            setTimeout(function () {
+                //목업
+                $(".page4 .mock").stop().addClass("go_up");
+            }, 600);
+            setTimeout(function () {
+                //홈피제목
+                $(".page4 .hm").stop().addClass("go_up");
+            }, 850);
+            setTimeout(function () {
+                //내용설명
+                $(".page4 .descript").stop().addClass("go_up");
+            }, 1200);
+            setTimeout(function () {
+                //버튼두개
+                $(".page4 .more_butt").stop().addClass("go_up");
+            }, 1600);
+            setTimeout(function () {
+                //오른쪽 홈페이지 옆에서 들어오게
+                $(".page4 .comein").stop().addClass("comes");
+            }, 1800);
+        } else if (point >= con5 && point < con6) {
+            erase();
+            $(".navi li").eq(4).children("span").stop().addClass("on");
+            $(".navi li").eq(4).children("div").stop().addClass("col_on");
 
             //자바스크립트 모음집
             setTimeout(function () {
@@ -232,8 +229,8 @@ $(function () {
             }, 1200);
         } else if (point >= con6 && point < con7) {
             erase();
-            $(".navi li").eq(4).children("span").stop().addClass("on");
-            $(".navi li").eq(4).children("div").stop().addClass("col_on");
+            $(".navi li").eq(5).children("span").stop().addClass("on");
+            $(".navi li").eq(5).children("div").stop().addClass("col_on");
             //일러
             setTimeout(function () {
                 //타이틀
@@ -245,8 +242,8 @@ $(function () {
             }, 600);
         } else if (point >= con7 && point < con8) {
             erase();
-            $(".navi li").eq(5).children("span").stop().addClass("on");
-            $(".navi li").eq(5).children("div").stop().addClass("col_on");
+            $(".navi li").eq(6).children("span").stop().addClass("on");
+            $(".navi li").eq(6).children("div").stop().addClass("col_on");
 
             //애니
             setTimeout(function () {
@@ -266,8 +263,8 @@ $(function () {
             }, 1200);
         } else {
             erase();
-            $(".navi li").eq(6).children("span").stop().addClass("on");
-            $(".navi li").eq(6).children("div").stop().addClass("col_on");
+            $(".navi li").eq(7).children("span").stop().addClass("on");
+            $(".navi li").eq(7).children("div").stop().addClass("col_on");
 
             //연락처컨택
             setTimeout(function () {
@@ -315,7 +312,7 @@ $(function () {
             $("html, body").stop().animate({ scrollTop: target });
             nav();
         } else {
-            let target = $("#container section").eq(6).offset().top;
+            let target = $("#container section").eq(7).offset().top;
             $("html, body").stop().animate({ scrollTop: target });
             nav();
         }
@@ -389,27 +386,6 @@ $(function () {
         $(this).children(".l_butt").removeClass("bold_on");
     });
     Splitting();
-    //마우스 가져가면 홈페이지 분리되는 박스
-    // $(".comein").on("mouseenter", function () {
-    //     $(this)
-    //         .children(".box_sz")
-    //         .stop()
-    //         .animate({ top: "52%", left: "15px" }, 500);
-    //     $(this)
-    //         .children(".p4_box")
-    //         .stop()
-    //         .animate({ top: "-85px", left: "15px" }, 500);
-    // });
-    // $(".comein").on("mouseleave", function () {
-    //     $(this)
-    //         .children(".box_sz")
-    //         .stop()
-    //         .animate({ top: "50%", left: "0px" }, 500);
-    //     $(this)
-    //         .children(".p4_box")
-    //         .stop()
-    //         .animate({ top: "-100px", left: "0px" }, 500);
-    // });
 
     //일러스트 이미지 크게 보이는 팝업
     $(".small li").on("click", function () {
